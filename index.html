@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form</title>
+    <title>Second Task (Form)</title>
     <style>
 		/* Add some padding to the body */
 		body {
@@ -13,7 +13,19 @@
 			font-family: Arial, sans-serif;
 			font-size: 14px;
 			line-height: 1.5;
+            color: #444;
 		}
+        /*format text*/
+        h1{
+            font-family:Arial, Helvetica, sans-serif;
+            color: #444;
+            font-size: 40px;
+            text-align: center;
+        }
+        
+        .one{
+            color:#66cc66;
+        }
 
 		/* Add some margin and padding to the form */
 		form {
@@ -21,6 +33,7 @@
 			padding: 20px;
 			background-color: #fff;
 			border: 1px solid #ccc;
+            border-right: 3px solid #66cc66;
 			max-width: 600px;
 		}
 
@@ -39,6 +52,22 @@
 			font-size: 16px;
 			line-height: 1.5;
 		}
+        form input[type="text"]:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+		form input[type="email"]:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+		form input[type="tel"]:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+		form input[type="password"]:hover{
+            border:1px solid #444;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        form select:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
 
 		/* Add some margin and padding to the form labels */
 		form label {
@@ -84,11 +113,13 @@
 
 		form input[type="submit"]:hover {
 			background-color: #444;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 	</style>
 </head>
 <body>
         <form action="#" method="POST" onsubmit="return validateForm()">
+            <h1>Student Bio <span class="one">Data:</span></h1>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
         
@@ -177,9 +208,9 @@
                 return true;
             }
         </script>
-        <!--
+        
         <div id="email-error" class="error"></div>
         <div id="success-message" class="success"></div>
-        -->
+        
 </body>
 </html>
